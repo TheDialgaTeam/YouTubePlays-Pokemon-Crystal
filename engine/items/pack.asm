@@ -492,7 +492,9 @@ TossMenu:
 	jr c, .finish
 	ld hl, wNumItems
 	ld a, [wCurItemQuantity]
-	call TossItem
+	nop
+    nop
+    nop
 	call Pack_GetItemName
 	ld hl, ThrewAwayText
 	call Pack_PrintTextNoScroll
