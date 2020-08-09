@@ -1406,8 +1406,11 @@ BattleCheckTypeMatchup:
 	ld hl, wEnemyMonType1
 	ldh a, [hBattleTurn]
 	and a
-	jr z, CheckTypeMatchup
+	jr z, .get_type
 	ld hl, wBattleMonType1
+.get_type
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
 CheckTypeMatchup:
 ; There is an incorrect assumption about this function made in the AI related code: when
 ; the AI calls CheckTypeMatchup (not BattleCheckTypeMatchup), it assumes that placing the
@@ -1418,8 +1421,6 @@ CheckTypeMatchup:
 	push hl
 	push de
 	push bc
-	ld a, BATTLE_VARS_MOVE_TYPE
-	call GetBattleVar
 	ld d, a
 	ld b, [hl]
 	inc hl
