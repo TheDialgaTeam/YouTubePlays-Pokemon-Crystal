@@ -1634,7 +1634,7 @@ BillsPC_CheckMail_PreventBlackout:
 BillsPC_IsMonAnEgg:
 	ld a, [wCurPartySpecies]
 	cp EGG
-	jr z, .egg
+	jr .egg
 	and a
 	ret
 
@@ -2225,7 +2225,7 @@ PCString_Got: db "Got @"
 PCString_Non: db "Non.@"
 PCString_BoxFull: db "The BOX is full.@"
 PCString_PartyFull: db "The party's full!@"
-PCString_NoReleasingEGGS: db "No releasing EGGS!@"
+PCString_NoReleasingEGGS: db "No releasing <PK><MN>!!!@"
 
 _ChangeBox:
 	call LoadStandardMenuHeader
