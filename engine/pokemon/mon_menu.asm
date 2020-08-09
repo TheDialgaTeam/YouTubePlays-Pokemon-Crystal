@@ -46,7 +46,9 @@ TossItemFromPC:
 	jr c, .quit
 	pop hl
 	ld a, [wCurItemQuantity]
-	call TossItem
+	nop
+	nop
+	nop
 	call PartyMonItemName
 	ld hl, .ItemsDiscardedText
 	call MenuTextbox
