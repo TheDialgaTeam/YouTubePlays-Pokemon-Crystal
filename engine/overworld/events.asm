@@ -560,8 +560,9 @@ TryObjectEvent:
 	ld de, 3
 	ld hl, .pointers
 	call IsInArray
-	jr nc, .nope
+	; jr nc, .nope
 	pop bc
+	jr nc, .nope
 
 	inc hl
 	ld a, [hli]
