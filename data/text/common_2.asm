@@ -618,10 +618,8 @@ _AskQuantityThrowAwayText::
 	done
 
 _ThrewAwayText::
-	text "Threw away"
-	line "@"
-	text_ram wStringBuffer2
-	text "(S)."
+	text "No tossing"
+	line "allowed! "
 	prompt
 
 _OakThisIsntTheTimeText::
@@ -1399,10 +1397,8 @@ _ItemsThrowAwayText::
 	done
 
 _ItemsDiscardedText::
-	text "Discarded"
-	line "@"
-	text_ram wStringBuffer1
-	text "(S)."
+	text "Discarded nothing!"
+	line ""
 	prompt
 
 _ItemsTooImportantText::
