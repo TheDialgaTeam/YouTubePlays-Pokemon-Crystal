@@ -4896,9 +4896,9 @@ BattleMenu:
 	ld a, [wBattleMenuCursorBuffer]
 	cp $1
 	jp z, BattleMenu_Fight
-	cp $3
-	jp z, BattleMenu_Pack
 	cp $2
+	jp z, BattleMenu_Pack
+	cp $3
 	jp z, BattleMenu_PKMN
 	cp $4
 	jp z, BattleMenu_Run
