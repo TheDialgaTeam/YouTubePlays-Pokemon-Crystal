@@ -43,8 +43,8 @@ MenuData_0x24f34:
 
 Strings24f3d:
 	db "FIGHT@"
-	db "<PKMN>@"
-	db "PACK@"
+	db "BAG@"
+	db "#<MN>@"
 	db "RUN@"
 
 MenuHeader_0x24f4e:
@@ -88,8 +88,8 @@ MenuData_0x24f91:
 
 Strings24f9a:
 	db "FIGHT@"
-	db "<PKMN>@"
 	db "PARKBALL×  @"
+	db "<PKMN>@"
 	db "RUN@"
 
 Function24fb2:
